@@ -24,7 +24,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Contributing', link: 'https://github.com/screeniehost/docs' }
+      { text: 'Contributing', link: '/resources/contribute' }
     ],
 
     sidebar: [
@@ -37,6 +37,17 @@ export default defineConfig({
           { text: 'Advanced Installation', link: '/get-started/advanced-installation' },
           { text: 'Updating', link: '/get-started/updating' },
           { text: 'Troubleshooting', link: '/get-started/troubleshooting' }
+        ]
+      },
+      {
+        text: 'Resources',
+        collapsed: true,
+        items: [
+          { text: 'Team', link: '/resources/team' },
+          { text: 'Support', link: '/resources/support' },
+          { text: 'Sponsors', link: '/resources/sponsors' },
+          { text: 'Branding', link: '/resources/branding' },
+          { text: 'Contribute', link: '/resources/contribute' }
         ]
       }
     ],

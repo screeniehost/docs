@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "screenie"
+  name: "screenie Docs"
   text: "documentation for screenie and it's apps."
-  tagline: On this webpage, you will find all the guides needed to get started with our applications
+  tagline: On this webpage, you will find all the guides needed to get started with our apps
   actions:
     - theme: brand
       text: Get started
