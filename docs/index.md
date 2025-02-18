@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "screenie Docs"
-  text: "Documentation page for screenie"
-  tagline: My great project tagline
+  name: "screenie"
+  text: "documentation for screenie and it's apps."
+  tagline: On this webpage, you will find all the guides needed to get started with our applications
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,11 +15,10 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Easy and Fast Guides 🚀
+    details: We offer easy and fast guides to help you get started quickly.
+  - title: One-Line Installers ⚡
+    details: Sometimes, all it takes is a single line to install and set up.
+  - title: Constant Updates 🔄
+    details: Our documentation is constantly being updated to provide the latest information.
 ---
-

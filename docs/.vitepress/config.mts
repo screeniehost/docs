@@ -2,13 +2,17 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/",
+  lastUpdated: true,
+  lang: 'en-US',
+  head: [['link', { rel: 'icon', href: '/assets/favicon.png' }]],
   title: "screenie Docs",
   description: "Documentation page for screenie",
   themeConfig: {
+    logo: '/assets/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Home', link: '/' }
     ],
 
     sidebar: [
@@ -22,7 +26,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/screeniehost' },
+      { icon: 'discord', link: 'https://discord.gg/tsRDJTARnS' }
+    ],
+    search: {
+      provider: 'local'
+    }
   }
 })
