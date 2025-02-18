@@ -8,17 +8,20 @@ hero:
   tagline: On this webpage, you will find all the guides needed to get started with our applications
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get started
+      link: /get-started/what-is-screenie
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Installation
+      link: /get-started/installation
 
 features:
-  - title: Easy and Fast Guides 🚀
+  - icon: 🚀
+    title: Easy and Fast Guides
     details: We offer easy and fast guides to help you get started quickly.
-  - title: One-Line Installers ⚡
+  - icon: ⚡
+    title: One-Line Installers
     details: Sometimes, all it takes is a single line to install and set up.
-  - title: Constant Updates 🔄
+  - icon: 🔄
+    title: Constant Updates
     details: Our documentation is constantly being updated to provide the latest information.
 ---

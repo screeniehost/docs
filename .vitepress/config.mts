@@ -3,13 +3,15 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/",
+  srcDir: 'docs',
+  cleanUrls: true,
   lastUpdated: true,
   lang: 'en-US',
-  head: [['link', { rel: 'icon', href: '/assets/favicon.png' }]],
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   title: "screenie Docs",
   description: "Documentation page for screenie",
   themeConfig: {
-    logo: '/assets/logo.png',
+    logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' }
@@ -17,10 +19,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Get Started',
+        collapsed: false,
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'What is screenie?', link: '/get-started/what-is-screenie' },
+          { text: 'Installation', link: '/get-started/installation' },
+          { text: 'Advanced Installation', link: '/get-started/advanced-installation' },
+          { text: 'Updating', link: '/get-started/updating' },
+          { text: 'Troubleshooting', link: '/get-started/troubleshooting' }
         ]
       }
     ],
@@ -31,6 +37,9 @@ export default defineConfig({
     ],
     search: {
       provider: 'local'
+    },
+    editLink: {
+      pattern: 'https://github.com/screeniehost/docs/edit/main/docs/:path'
     }
   }
 })
