@@ -12,9 +12,10 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.png' }],
     ['meta', { property: 'og:title', content: 'screenie Docs' }],
     ['meta', { property: 'og:description', content: 'Documentation page for screenie' }],
-    ['meta', { property: 'og:image', content: '/logo.png' }],
+    ['meta', { property: 'og:image', content: '/favicon.png' }],
     ['meta', { property: 'og:url', content: 'https://docs.screenie.host' }],
-    ['meta', { property: 'og:type', content: 'website' }]
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'theme-color', content: '#74ebd5' }]
   ],
   title: "screenie Docs",
   description: "Documentation page for screenie",
