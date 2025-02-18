@@ -6,15 +6,24 @@ export default defineConfig({
   srcDir: 'docs',
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   lang: 'en-US',
-  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }],
+    ['meta', { property: 'og:title', content: 'screenie Docs' }],
+    ['meta', { property: 'og:description', content: 'Documentation page for screenie' }],
+    ['meta', { property: 'og:image', content: '/logo.png' }],
+    ['meta', { property: 'og:url', content: 'https://docs.screenie.host' }],
+    ['meta', { property: 'og:type', content: 'website' }]
+  ],
   title: "screenie Docs",
   description: "Documentation page for screenie",
   themeConfig: {
     logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' }
+      { text: 'Home', link: '/' },
+      { text: 'Contributing', link: 'https://github.com/screeniehost/docs' }
     ],
 
     sidebar: [
