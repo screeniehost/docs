@@ -1,0 +1,208 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Documentation",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/uploads/{uploadkey}": {
+      "get": {
+        "tags": ["Uploads"],
+        "summary": "Get uploads by upload key.",
+        "parameters": [
+          {
+            "name": "uploadkey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      }
+    },
+    "/api/domains": {
+      "get": {
+        "tags": ["Domains"],
+        "summary": "Get all domains.",
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      }
+    },
+    "/api/upload": {
+      "post": {
+        "tags": ["Uploads"],
+        "summary": "Upload a file.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "uploadKey": { "type": "string" },
+                  "file": { "type": "string", "format": "binary" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "File uploaded."
+          }
+        }
+      }
+    },
+    "/api/profile_pictures": {
+      "get": {
+        "tags": ["Profile Pictures"],
+        "summary": "Get profile pictures.",
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      }
+    },
+    "/admin/user/{id}": {
+      "get": {
+        "tags": ["Admin Users"],
+        "summary": "Get user by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      },
+      "post": {
+        "tags": ["Admin Users"],
+        "summary": "Update user by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User updated."
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Admin Users"],
+        "summary": "Delete user by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User deleted."
+          }
+        }
+      }
+    },
+    "/admin/upload/{id}": {
+      "get": {
+        "tags": ["Admin Uploads"],
+        "summary": "Get upload by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Admin Uploads"],
+        "summary": "Delete upload by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Upload deleted."
+          }
+        }
+      }
+    },
+    "/admin/domain/{id}": {
+      "get": {
+        "tags": ["Admin Domains"],
+        "summary": "Get domain by ID.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success."
+          }
+        }
+      }
+    },
+    "/admin/domain": {
+      "post": {
+        "tags": ["Admin Domains"],
+        "summary": "Add a new domain.",
+        "responses": {
+          "200": {
+            "description": "Domain added."
+          }
+        }
+      }
+    }
+  }
+}
