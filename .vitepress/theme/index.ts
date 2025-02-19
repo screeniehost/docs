@@ -8,6 +8,10 @@ import './style.css'
 import { theme, useOpenapi } from 'vitepress-openapi/client'
 import 'vitepress-openapi/dist/style.css'
 
+// changelogs update
+import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -17,7 +21,7 @@ export default {
   },
   async enhanceApp({ app }) {
     const spec = await import('../../docs/public/openapi.json').then(module => module.default)
-
+    app.use(NolebaseGitChangelogPlugin)
     const openapi = useOpenapi({ 
       spec,
       config: { 

@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress'
 
-
+// api update
 import { useSidebar } from 'vitepress-openapi'
 import spec from '../docs/public/openapi.json' with { type: 'json' }
-
 const sidebar = useSidebar({ spec })
+
+// changelogs update
+import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -25,6 +27,20 @@ export default defineConfig({
   ],
   title: "screenie Docs",
   description: "Documentation page for screenie",
+
+  vite: { 
+    plugins: [ 
+      GitChangelog({ 
+        repoURL: () => 'https://github.com/screeniehost/docs',
+      }), 
+      GitChangelogMarkdownSection({
+        sections:  {
+          disableContributors: true,
+        }
+      }), 
+    ],
+  }, 
+
   themeConfig: {
     logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
