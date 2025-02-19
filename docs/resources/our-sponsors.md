@@ -14,6 +14,6 @@ const members = [
 </script>
 
 # Sponsors
-these users sponsored our project to help it grow over time
+These users sponsored our project, to help it grow over time
 
 <VPTeamMembers size="small" :members="members" />

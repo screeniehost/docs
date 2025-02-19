@@ -1,21 +1,11 @@
 # Introduction
 
-::: info
-the updated version api section of the documentation is coming soon, but until it's updated, here's the list of the API endpoints for the main screenie app
-:::
+Welcome to the screenie's API documentation. This API allows you to interact with the Screenie application programmatically. Below, you'll find information on how to use the API, including authentication methods and available endpoints.
 
-| Request type | Endpoint | Description |
-| :---: | :---: | --- |
-| <Badge type="tip" text="GET" /> | `/api/uploads/:uploadkey` | Returns a list of uploads uploaded with the upload key. |
-| <Badge type="tip" text="GET" /> | `/api/domains` | Returns a list of all the domains. |
-| <Badge type="warning" text="POST" /> | `/api/upload` | This is the upload URL, and you can use other apps to upload files. In the post body you only need the `uploadKey` and the `file`. |
-| <Badge type="tip" text="GET" /> | `/api/profile_pictures` | Returns profile pictures. |
-| <Badge type="tip" text="GET" /> | `/admin/user/:id` | Returns user details by user ID. |
-| <Badge type="warning" text="POST" /> | `/admin/user/:id` | Updates user details by user ID. |
-| <Badge type="danger" text="DELETE" /> | `/admin/user/:id` | Deletes a user by user ID. |
-| <Badge type="tip" text="GET" /> | `/admin/upload/:id` | Returns upload details by upload ID. |
-| <Badge type="danger" text="DELETE" /> | `/admin/upload/:id` | Deletes an upload by upload ID. |
-| <Badge type="tip" text="GET" /> | `/admin/domain/:id` | Returns domain details by domain ID. |
-| <Badge type="warning" text="POST" /> | `/admin/domain` | Adds a new domain. |
-| <Badge type="warning" text="POST" /> | `/admin/upload/:id` | Updates domain details by domain ID. |
-| <Badge type="danger" text="DELETE" /> | `/admin/upload/:id` | Deletes an upload by domain ID. |
+## Authentication
+
+### Upload Key
+For uploading files, authentication is handled through an upload key. This key must be included in the request to authorize the upload.
+
+### Admin Access
+Admin access is currently managed through login sessions. This will be updated to a more robust authentication method when we move to a new framework.

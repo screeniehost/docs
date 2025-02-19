@@ -7,11 +7,11 @@ Follow these steps to contribute to our repositories:
 - Fork the repository, you want to contribute to on GitHub.
 - Clone your fork to your local system using:
 ```sh
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/yourname/example.git
 ```
 - Navigate to the cloned directory:
 ```sh
-cd your-repo-name
+cd example
 ```
 
 ## Install Dependencies

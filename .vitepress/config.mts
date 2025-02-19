@@ -1,5 +1,11 @@
 import { defineConfig } from 'vitepress'
 
+
+import { useSidebar } from 'vitepress-openapi'
+import spec from '../docs/public/openapi.json' with { type: 'json' }
+
+const sidebar = useSidebar({ spec })
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/",
@@ -52,10 +58,20 @@ export default defineConfig({
             { text: 'Known Issues', link: '/screenie-app/knowledge-base/known-issues' },
             { text: 'Future Plans', link: '/screenie-app/knowledge-base/future-plans' }
           ]},
-          { text: 'API',
+          { text: 'API Reference',
             collapsed: true,
             items: [
-            { text: 'Introduction', link: '/screenie-app/api/introduction' }
+              { text: 'Introduction', link: '/screenie-app/api/introduction' },
+              ...sidebar.generateSidebarGroups ({
+                linkPrefix: '/screenie-app/api/operations/',
+                sidebarItemTemplate: (method, path) => {
+                  const operation = spec.paths[path]?.[method];
+                  return `<div class="OASidebarItem group/oaSidebarItem" style="display: grid; grid-template-columns: 1fr auto;">
+                  <span class="text" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${operation ? operation.summary : path}</span>
+                  <span class="OASidebarItem-badge OAMethodBadge--${method.toLowerCase()}">${method.toUpperCase()}</span>
+                </div>`;
+                }
+            }),
           ]},
         ]
       },

@@ -4,6 +4,10 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
+// api docs update
+import { theme, useOpenapi } from 'vitepress-openapi/client'
+import 'vitepress-openapi/dist/style.css'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -11,7 +15,15 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  async enhanceApp({ app }) {
+    const response = await fetch('/openapi.json')
+    const spec = await response.json()
+
+    const openapi = useOpenapi({ 
+      spec,
+      config: { 
+      },
+    }) 
+    theme.enhanceApp({ app, openapi })
   }
 } satisfies Theme
