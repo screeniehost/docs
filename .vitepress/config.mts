@@ -40,12 +40,33 @@ export default defineConfig({
         ]
       },
       {
+        text: 'screenie app',
+        collapsed: true,
+        items: [
+          { text: 'Configuration', link: '/screenie-app/configuration' },
+          { text: 'Creating new endpoints', link: '/screenie-app/create-new-endpoints' },
+          { text: 'Adding folders to the checker', link: '/screenie-app/adding-folders-to-checker' },
+          { text: 'Knowledge Base',
+            collapsed: true,
+            items: [
+            { text: 'Known Issues', link: '/screenie-app/knowledge-base/known-issues' },
+            { text: 'Future Plans', link: '/screenie-app/knowledge-base/future-plans' }
+          ]},
+          { text: 'API',
+            collapsed: true,
+            items: [
+            { text: 'Introduction', link: '/screenie-app/api/introduction' }
+          ]},
+        ]
+      },
+      {
         text: 'Resources',
         collapsed: true,
         items: [
           { text: 'Team', link: '/resources/team' },
           { text: 'Support', link: '/resources/support' },
-          { text: 'Sponsors', link: '/resources/sponsors' },
+          { text: 'Sponsoring', link: '/resources/sponsoring' },
+          { text: 'Our Sponsors', link: '/resources/our-sponsors' },
           { text: 'Branding', link: '/resources/branding' },
           { text: 'Contribute', link: '/resources/contribute' }
         ]

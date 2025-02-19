@@ -16,7 +16,7 @@ const members = [
   {
     avatar: 'https://www.github.com/smolen92.png',
     name: 'smolen92',
-    title: 'Developer',
+    title: 'Docker Manager and Developer',
     links: [
       { icon: 'github', link: 'https://github.com/smolen92' }
     ]
@@ -27,5 +27,7 @@ const members = [
 # screenie Team
 
 These are the people, who helped screenie grow to, what is it today
+
+Want to be part of our team? Reach out via [email](mailto:hi@screenie.host) or [our community discord server](https://discord.gg/tsRDJTARnS).
 
 <VPTeamMembers size="small" :members="members" />

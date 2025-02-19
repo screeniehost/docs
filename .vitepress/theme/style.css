@@ -70,6 +70,21 @@
   --vp-c-danger-soft: var(--vp-c-red-soft);
 }
 
+/* :root {
+  --vp-badge-get-border: transparent;
+  --vp-badge-get-text: #28a745;
+  --vp-badge-get-bg: #d4edda;
+
+  --vp-badge-post-border: transparent;
+  --vp-badge-post-text: #ffc107;
+  --vp-badge-post-bg: #fff3cd;
+
+  --vp-badge-delete-border: transparent;
+  --vp-badge-delete-text: #dc3545;
+  --vp-badge-delete-bg: #f8d7da; 
+} */
+
+
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
