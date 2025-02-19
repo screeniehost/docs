@@ -2,7 +2,7 @@
 
 Follow these steps to contribute to our repositories:
 
-## 1. Fork and Clone the Repository
+## Fork and Clone the Repository
 
 - Fork the repository, you want to contribute to on GitHub.
 - Clone your fork to your local system using:
@@ -14,14 +14,14 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
-## 2. Install Dependencies
+## Install Dependencies
 
 Run the following command to install dependencies:
 ```bash
 npm install
 ```
 
-## 3. Start the app
+## Start the app
 
 Run one of the following commands to start the app:
 ```bash
@@ -33,11 +33,11 @@ pm2 start . --name screenie # if using linux
 ```
 This will start a local server and provide a URL to preview your changes.
 
-## 4. Make Your Contribution
+## Make Your Contribution
 
 - Edit or make new files in the repository folder.
 
-## 5. Submit a Pull Request
+## Submit a Pull Request
 
 - Push your changes to your forked repository.
 - Create a pull request to merge your changes into the main repository.
