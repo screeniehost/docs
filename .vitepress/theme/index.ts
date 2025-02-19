@@ -12,6 +12,10 @@ import 'vitepress-openapi/dist/style.css'
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 
+// link preview update
+import { NolebaseInlineLinkPreviewPlugin } from '@nolebase/vitepress-plugin-inline-link-preview/client'
+import '@nolebase/vitepress-plugin-inline-link-preview/client/style.css'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -22,6 +26,7 @@ export default {
   async enhanceApp({ app }) {
     const spec = await import('../../docs/public/openapi.json').then(module => module.default)
     app.use(NolebaseGitChangelogPlugin)
+    app.use(NolebaseInlineLinkPreviewPlugin) 
     const openapi = useOpenapi({ 
       spec,
       config: { 

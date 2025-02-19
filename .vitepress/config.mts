@@ -8,6 +8,9 @@ const sidebar = useSidebar({ spec })
 // changelogs update
 import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
 
+// link preview update
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "/",
@@ -28,7 +31,18 @@ export default defineConfig({
   title: "screenie Docs",
   description: "Documentation page for screenie",
 
-  vite: { 
+  vite: {
+    optimizeDeps: { 
+      exclude: [ 
+        '@nolebase/vitepress-plugin-inline-link-preview/client', 
+      ], 
+    }, 
+    ssr: { 
+      noExternal: [ 
+        // If there are other packages that need to be processed by Vite, you can add them here. //
+        '@nolebase/vitepress-plugin-inline-link-preview', 
+      ], 
+    },
     plugins: [ 
       GitChangelog({ 
         repoURL: () => 'https://github.com/screeniehost/docs',
@@ -39,7 +53,13 @@ export default defineConfig({
         }
       }), 
     ],
-  }, 
+  },
+
+  markdown: { 
+    config(md) { 
+      md.use(InlineLinkPreviewElementTransform) 
+    } 
+  },
 
   themeConfig: {
     logo: '/logo.png',
