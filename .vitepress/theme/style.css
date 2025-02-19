@@ -105,6 +105,11 @@
  * Component: Home
  * -------------------------------------------------------------------------- */
 
+
+ .floating {
+  animation: floating 3s infinite;
+}
+
 :root {
   --vp-c-brand-1: #74ebd5;
   --vp-c-brand-2: #5bc2a4;
