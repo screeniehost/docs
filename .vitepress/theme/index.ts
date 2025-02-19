@@ -16,7 +16,7 @@ export default {
     })
   },
   async enhanceApp({ app }) {
-    const response = await fetch('/openapi.json')
+    const response = await fetch('./openapi.json')
     const spec = await response.json()
 
     const openapi = useOpenapi({ 
