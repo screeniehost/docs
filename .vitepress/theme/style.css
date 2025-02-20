@@ -43,7 +43,13 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
 :root {
+  /* main */
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -68,49 +74,8 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
-}
-
-/* :root {
-  --vp-badge-get-border: transparent;
-  --vp-badge-get-text: #28a745;
-  --vp-badge-get-bg: #d4edda;
-
-  --vp-badge-post-border: transparent;
-  --vp-badge-post-text: #ffc107;
-  --vp-badge-post-bg: #fff3cd;
-
-  --vp-badge-delete-border: transparent;
-  --vp-badge-delete-text: #dc3545;
-  --vp-badge-delete-bg: #f8d7da; 
-} */
 
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
-
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
-
-
- .floating {
-  animation: floating 3s infinite;
-}
-
-:root {
   --vp-c-brand-1: #74ebd5;
   --vp-c-brand-2: #5bc2a4;
   --vp-c-brand-3: #3b8f76;
@@ -127,6 +92,41 @@
     #acb6e5 50%
   );
   --vp-home-hero-image-filter: blur(44px);
+  
+  
+  /* button component */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+
+
+  /* custom block component */
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+.image-container {
+  animation: floating 7s infinite;
+}
+
+@keyframes floating {
+  0% {
+      transform: translate(0, 0);
+  }
+  50% {
+      transform: translate(0, -15px);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
 }
 
 @media (min-width: 640px) {
@@ -139,17 +139,6 @@
   :root {
     --vp-home-hero-image-filter: blur(68px);
   }
-}
-
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-custom-block-tip-border: transparent;
-  --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
 /**

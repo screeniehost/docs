@@ -17,8 +17,8 @@ hero:
 
 features:
   - icon: 🚀
-    title: Easy and Fast Guides
-    details: We offer easy and fast guides to help you get started quickly.
+    title: Quick and easy guides
+    details: We offer easy and fast guides to help you get started with our apps.
   - icon: ⚡
     title: One-Line Installers
     details: Sometimes, all it takes is a single line to install and set up.
