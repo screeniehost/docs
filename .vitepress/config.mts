@@ -50,7 +50,7 @@ export default defineConfig({
       }), 
       GitChangelogMarkdownSection({
         sections:  {
-          disableContributors: true,
+          disableContributors: false,
         }
       }), 
     ],
