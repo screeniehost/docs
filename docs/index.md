@@ -12,8 +12,8 @@ hero:
       text: Get started
       link: /get-started/what-is-screenie
     - theme: alt
-      text: Installation
-      link: /get-started/installation
+      text: GitHub
+      link: https://github.com/screeniehost
 
 features:
   - icon: 🚀

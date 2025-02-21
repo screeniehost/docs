@@ -20,10 +20,10 @@ export default defineConfig({
   ignoreDeadLinks: true,
   lang: 'en-US',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { property: 'og:title', content: 'screenie Docs' }],
     ['meta', { property: 'og:description', content: 'Documentation page for screenie' }],
-    ['meta', { property: 'og:image', content: '/favicon.png' }],
+    ['meta', { property: 'og:image', content: '/favicon.ico' }],
     ['meta', { property: 'og:url', content: 'https://docs.screenie.host' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { name: 'theme-color', content: '#74ebd5' }]
