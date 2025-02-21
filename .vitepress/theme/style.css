@@ -1,6 +1,6 @@
 /**
  * Customize default theme styling by overriding CSS variables:
- * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ * https:
  */
 
 /**
@@ -48,17 +48,18 @@
  * Component: Home
  * -------------------------------------------------------------------------- */
 
+
 :root {
-  /* main */
+
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-brand-1: #4cae9b;
+  --vp-c-brand-2: #3a8a75;
+  --vp-c-brand-3: #2e6d5c;
+  --vp-c-brand-soft: rgba(58, 138, 117, 0.1);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -75,10 +76,6 @@
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
 
-
-  --vp-c-brand-1: #74ebd5;
-  --vp-c-brand-2: #5bc2a4;
-  --vp-c-brand-3: #3b8f76;
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
@@ -94,7 +91,7 @@
   --vp-home-hero-image-filter: blur(44px);
   
   
-  /* button component */
+ 
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
   --vp-button-brand-bg: var(--vp-c-brand-3);
@@ -106,11 +103,17 @@
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 
 
-  /* custom block component */
+ 
   --vp-custom-block-tip-border: transparent;
   --vp-custom-block-tip-text: var(--vp-c-text-1);
   --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+.dark {
+  --vp-c-brand-1: #74ebd5;
+  --vp-c-brand-2: #5bc2a4;
+  --vp-c-brand-3: #3b8f76;
 }
 
 .image-container {

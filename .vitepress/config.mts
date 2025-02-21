@@ -19,6 +19,7 @@ export default defineConfig({
   lastUpdated: true,
   ignoreDeadLinks: true,
   lang: 'en-US',
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { property: 'og:title', content: 'screenie Docs' }],
@@ -58,7 +59,10 @@ export default defineConfig({
   markdown: { 
     config(md) { 
       md.use(InlineLinkPreviewElementTransform) 
-    } 
+    },
+    image: {
+      lazyLoading: true
+    }
   },
 
   themeConfig: {

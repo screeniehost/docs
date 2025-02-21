@@ -197,6 +197,16 @@
       "post": {
         "tags": ["Admin Domains"],
         "summary": "Add a new domain.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Domain added."
