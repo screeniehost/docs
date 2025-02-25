@@ -40,7 +40,6 @@ export default defineConfig({
     }, 
     ssr: { 
       noExternal: [ 
-        // If there are other packages that need to be processed by Vite, you can add them here. //
         '@nolebase/vitepress-plugin-inline-link-preview', 
       ], 
     },
@@ -89,6 +88,7 @@ export default defineConfig({
         text: 'screenie app',
         collapsed: true,
         items: [
+          { text: 'Introduction', link: '/screenie-app/introduction' },
           { text: 'Configuration', link: '/screenie-app/configuration' },
           { text: 'Creating new endpoints', link: '/screenie-app/create-new-endpoints' },
           { text: 'Adding folders to the checker', link: '/screenie-app/adding-folders-to-checker' },

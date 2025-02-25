@@ -14,6 +14,14 @@ const members = [
     ]
   },
   {
+    avatar: 'https://www.github.com/astraxy.png',
+    name: 'astraxy',
+    title: 'Co-Founder, Developer',
+    links: [
+      { icon: 'github', link: 'https://github.com/astraxy' }
+    ]
+  },
+  {
     avatar: 'https://www.github.com/smolen92.png',
     name: 'smolen92',
     title: 'Docker Manager and Developer',
